@@ -1,0 +1,2 @@
+# anki-observer
+This is an observer which detects and and tracks anki cars from a anki race video stream. Furthermore, stats from the race will also be recorded and displayed along side the race video stream.
