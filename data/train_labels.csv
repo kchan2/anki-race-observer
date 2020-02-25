@@ -1,0 +1,549 @@
+filename,width,height,class,xmin,ymin,xmax,ymax
+charger1.png,0,0,Charger,314,193,484,282
+charger10.png,0,0,Charger,353,186,378,226
+charger12.png,0,0,Charger,297,211,385,262
+charger13.png,0,0,Charger,296,158,356,254
+charger14.png,0,0,Charger,284,164,369,215
+charger15.png,0,0,Charger,306,183,377,269
+charger16.png,0,0,Charger,290,181,485,294
+charger17.png,0,0,Charger,267,169,346,255
+charger19.png,0,0,Charger,279,180,391,244
+charger2.png,0,0,Charger,304,190,411,257
+charger20.png,0,0,Charger,240,172,290,257
+charger21.png,0,0,Charger,342,156,391,238
+charger22.png,0,0,Charger,295,160,353,262
+charger23.png,0,0,Charger,301,193,395,245
+charger24.png,0,0,Charger,271,160,336,263
+charger25.png,0,0,Charger,306,189,382,245
+charger26.png,0,0,Charger,322,187,380,221
+charger27.png,0,0,Charger,316,164,354,230
+charger28.png,0,0,Charger,296,119,417,326
+charger29.png,0,0,Charger,307,174,397,242
+charger3.png,0,0,Charger,323,163,378,262
+charger30.png,0,0,Charger,302,145,354,235
+charger31.png,0,0,Charger,326,178,378,268
+charger32.png,0,0,Charger,296,199,384,251
+charger33.png,0,0,Charger,361,128,401,203
+charger34.png,0,0,Charger,299,203,340,225
+charger35.png,0,0,Charger,303,190,341,217
+charger36.png,0,0,Charger,327,183,353,222
+charger37.png,0,0,Charger,330,189,354,231
+charger38.png,0,0,Charger,240,126,324,283
+charger4.png,0,0,Charger,305,132,406,306
+charger5.png,0,0,Charger,292,194,399,251
+charger7.png,0,0,Charger,309,208,348,232
+charger8.png,0,0,Charger,315,183,339,221
+finishline1.png,0,0,Finish Line,266,220,457,262
+finishline10.png,0,0,Finish Line,322,190,400,285
+finishline11.png,0,0,Finish Line,337,198,430,279
+finishline12.png,0,0,Finish Line,220,214,422,249
+finishline13.png,0,0,Finish Line,345,217,419,310
+finishline14.png,0,0,Finish Line,344,190,454,239
+finishline15.png,0,0,Finish Line,339,195,457,231
+finishline17.png,0,0,Finish Line,241,224,432,254
+finishline18.png,0,0,Finish Line,299,135,348,322
+finishline19.png,0,0,Finish Line,174,199,479,246
+finishline2.png,0,0,Finish Line,128,222,569,286
+finishline20.png,0,0,Finish Line,199,152,448,279
+finishline21.png,0,0,Finish Line,245,217,451,256
+finishline22.png,0,0,Finish Line,231,138,317,320
+finishline23.png,0,0,Finish Line,254,141,411,329
+finishline24.png,0,0,Finish Line,160,222,468,271
+finishline25.png,0,0,Finish Line,313,158,454,334
+finishline26.png,0,0,Finish Line,279,189,479,256
+finishline27.png,0,0,Finish Line,301,156,408,298
+finishline28.png,0,0,Finish Line,244,241,418,281
+finishline29.png,0,0,Finish Line,186,218,529,266
+finishline4.png,0,0,Finish Line,228,126,295,289
+finishline5.png,0,0,Finish Line,245,193,439,317
+finishline7.png,0,0,Finish Line,320,170,438,221
+finishline8.png,0,0,Finish Line,356,121,493,191
+finishline9.png,0,0,Finish Line,373,208,494,239
+freewheel1.png,454,605,Freewheel,139,197,313,440
+freewheel10.png,454,605,Freewheel,174,210,256,425
+freewheel11.png,454,605,Freewheel,178,174,248,457
+freewheel12.png,454,605,Freewheel,122,283,386,446
+freewheel13.png,454,605,Freewheel,124,195,326,473
+freewheel14.png,454,605,Freewheel,65,254,397,406
+freewheel15.png,0,0,Freewheel,266,123,366,301
+freewheel16.png,0,0,Freewheel,235,163,408,258
+freewheel17.png,0,0,Freewheel,269,162,372,339
+freewheel18.png,0,0,Freewheel,210,153,399,256
+freewheel19.png,0,0,Freewheel,223,179,438,245
+freewheel2.png,454,605,Freewheel,148,179,270,428
+freewheel20.png,0,0,Freewheel,196,49,400,374
+freewheel22.png,0,0,Freewheel,120,112,485,300
+freewheel23.png,454,605,Freewheel,123,262,359,477
+freewheel24.png,0,0,Freewheel,136,97,519,291
+freewheel25.png,0,0,Freewheel,119,104,530,341
+freewheel26.png,0,0,Freewheel,94,104,450,314
+freewheel27.png,0,0,Freewheel,361,119,415,321
+freewheel28.png,0,0,Freewheel,275,131,369,298
+freewheel29.png,0,0,Freewheel,211,167,378,266
+freewheel30.png,0,0,Freewheel,232,147,404,239
+freewheel31.png,0,0,Freewheel,318,61,401,319
+freewheel32.png,0,0,Freewheel,193,66,279,280
+freewheel33.png,0,0,Freewheel,230,186,423,242
+freewheel34.png,454,605,Freewheel,110,161,268,457
+freewheel35.png,0,0,Freewheel,236,198,385,295
+freewheel36.png,0,0,Freewheel,256,153,409,247
+freewheel37.png,0,0,Freewheel,268,131,371,302
+freewheel38.png,0,0,Freewheel,226,88,421,218
+freewheel39.png,0,0,Freewheel,232,166,432,269
+freewheel4.png,454,605,Freewheel,190,267,267,442
+freewheel40.png,0,0,Freewheel,184,186,400,254
+freewheel41.png,0,0,Freewheel,231,122,338,302
+freewheel42.png,0,0,Freewheel,266,119,351,275
+freewheel44.png,0,0,Freewheel,184,117,351,228
+freewheel45.png,454,605,Freewheel,154,202,238,456
+freewheel46.png,0,0,Freewheel,191,180,382,240
+freewheel47.png,0,0,Freewheel,182,159,395,234
+freewheel48.png,0,0,Freewheel,153,164,361,245
+freewheel49.png,0,0,Freewheel,165,156,269,323
+freewheel5.png,454,605,Freewheel,130,208,344,463
+freewheel50.png,0,0,Freewheel,173,174,363,249
+freewheel51.png,0,0,Freewheel,273,133,340,327
+freewheel52.png,0,0,Freewheel,238,143,331,302
+freewheel53.png,0,0,Freewheel,161,133,326,249
+freewheel54.png,0,0,Freewheel,257,116,318,314
+freewheel55.png,0,0,Freewheel,276,198,355,222
+freewheel56.png,454,605,Freewheel,145,169,294,457
+freewheel57.png,0,0,Freewheel,279,184,323,254
+freewheel58.png,0,0,Freewheel,274,172,336,232
+freewheel59.png,0,0,Freewheel,329,168,356,249
+freewheel6.png,454,605,Freewheel,160,206,270,436
+freewheel60.png,0,0,Freewheel,278,198,377,231
+freewheel62.png,0,0,Freewheel,257,200,345,232
+freewheel63.png,0,0,Freewheel,331,169,364,255
+freewheel64.png,0,0,Freewheel,270,186,383,221
+freewheel65.png,454,605,Freewheel,119,283,408,416
+freewheel66.png,454,605,Freewheel,129,180,313,456
+freewheel67.png,454,605,Freewheel,92,287,338,379
+freewheel7.png,454,605,Freewheel,101,293,380,366
+freewheel8.png,454,605,Freewheel,192,123,306,415
+freewheel9.png,454,605,Freewheel,164,207,265,461
+multipleankis1.png,0,0,Freewheel,258,309,429,363
+multipleankis1.png,0,0,MXT,327,238,400,284
+multipleankis1.png,0,0,Skull,329,164,408,205
+multipleankis1.png,0,0,Charger,331,101,411,146
+multipleankis1.png,0,0,Shock,331,35,411,87
+multipleankis10.png,454,605,Charger,116,247,169,317
+multipleankis10.png,454,605,Skull,125,379,167,460
+multipleankis10.png,454,605,Shock,183,394,242,476
+multipleankis10.png,454,605,MXT,303,420,360,494
+multipleankis10.png,454,605,Finish Line,165,167,305,218
+multipleankis11.png,454,605,Charger,78,376,149,419
+multipleankis11.png,454,605,Skull,201,413,276,473
+multipleankis11.png,454,605,MXT,299,276,366,328
+multipleankis11.png,454,605,Shock,240,369,312,411
+multipleankis11.png,454,605,Finish Line,51,223,96,349
+multipleankis13.png,454,605,Finish Line,220,256,252,409
+multipleankis13.png,454,605,Charger,274,444,355,490
+multipleankis14.png,454,605,Finish Line,37,258,95,407
+multipleankis14.png,454,605,Charger,129,404,208,458
+multipleankis14.png,454,605,Skull,274,401,355,446
+multipleankis14.png,454,605,MXT,304,229,378,272
+multipleankis14.png,454,605,Shock,287,331,362,386
+multipleankis15.png,454,605,Finish Line,42,208,66,352
+multipleankis15.png,454,605,Charger,91,372,166,414
+multipleankis15.png,454,605,MXT,295,233,360,276
+multipleankis15.png,454,605,Shock,252,333,324,376
+multipleankis15.png,454,605,Skull,224,387,297,438
+multipleankis16.png,454,605,Skull,145,393,187,471
+multipleankis16.png,454,605,MXT,313,424,370,501
+multipleankis16.png,454,605,Shock,198,408,254,483
+multipleankis16.png,454,605,Charger,204,211,262,244
+multipleankis16.png,454,605,Finish Line,178,207,303,256
+multipleankis17.png,454,605,Finish Line,160,106,249,119
+multipleankis17.png,454,605,MXT,188,216,216,256
+multipleankis17.png,454,605,Charger,103,138,128,173
+multipleankis17.png,454,605,Shock,128,192,153,237
+multipleankis17.png,454,605,Skull,69,177,97,219
+multipleankis17.png,454,605,Freewheel,63,254,132,359
+multipleankis18.png,454,605,Shock,57,304,106,399
+multipleankis18.png,454,605,Charger,106,320,161,411
+multipleankis18.png,454,605,Freewheel,190,227,248,431
+multipleankis18.png,454,605,MXT,258,294,305,383
+multipleankis18.png,454,605,Skull,315,268,375,361
+multipleankis19.png,454,605,Shock,153,443,263,522
+multipleankis19.png,454,605,Charger,183,370,298,436
+multipleankis19.png,454,605,Freewheel,89,265,318,335
+multipleankis19.png,454,605,MXT,167,208,266,263
+multipleankis19.png,454,605,Skull,145,138,242,198
+multipleankis2.png,0,0,Skull,390,257,436,322
+multipleankis2.png,0,0,Freewheel,275,192,315,321
+multipleankis2.png,0,0,Charger,351,119,418,158
+multipleankis2.png,0,0,Shock,360,178,418,239
+multipleankis2.png,0,0,MXT,332,366,373,426
+multipleankis20.png,454,605,Finish Line,135,313,280,358
+multipleankis20.png,454,605,Shock,195,212,262,260
+multipleankis20.png,454,605,Charger,223,168,294,210
+multipleankis20.png,454,605,Freewheel,183,104,321,158
+multipleankis20.png,454,605,MXT,233,83,293,108
+multipleankis20.png,454,605,Skull,229,49,289,83
+multipleankis21.png,454,605,Finish Line,134,313,281,358
+multipleankis21.png,454,605,Shock,195,209,263,260
+multipleankis21.png,454,605,Charger,223,167,292,208
+multipleankis21.png,454,605,Freewheel,182,105,320,156
+multipleankis21.png,454,605,MXT,236,83,294,106
+multipleankis21.png,454,605,Skull,231,49,288,84
+multipleankis22.png,454,605,Finish Line,246,233,289,379
+multipleankis22.png,454,605,Shock,343,264,385,333
+multipleankis22.png,454,605,Charger,397,276,440,348
+multipleankis23.png,0,0,Charger,422,11,452,70
+multipleankis23.png,0,0,Shock,415,86,448,142
+multipleankis23.png,0,0,Skull,406,165,442,217
+multipleankis23.png,0,0,MXT,409,238,442,286
+multipleankis23.png,0,0,Freewheel,406,307,441,425
+multipleankis24.png,454,605,Finish Line,165,169,306,217
+multipleankis24.png,454,605,Charger,117,246,169,318
+multipleankis24.png,454,605,Skull,126,381,167,461
+multipleankis24.png,454,605,Shock,185,394,242,476
+multipleankis24.png,454,605,MXT,301,419,365,494
+multipleankis25.png,454,605,Charger,76,376,151,421
+multipleankis25.png,454,605,MXT,299,275,365,326
+multipleankis25.png,454,605,Shock,240,366,314,410
+multipleankis25.png,454,605,Skull,201,412,278,474
+multipleankis25.png,454,605,Finish Line,48,222,99,351
+multipleankis26.png,454,605,Finish Line,38,260,91,410
+multipleankis26.png,454,605,Charger,130,403,211,458
+multipleankis26.png,454,605,MXT,307,229,376,274
+multipleankis26.png,454,605,Shock,286,331,366,385
+multipleankis26.png,454,605,Skull,275,403,354,444
+multipleankis27.png,454,605,Finish Line,39,206,69,355
+multipleankis27.png,454,605,Charger,92,370,167,410
+multipleankis27.png,454,605,Skull,224,388,299,441
+multipleankis27.png,454,605,Shock,251,333,325,377
+multipleankis27.png,454,605,MXT,295,231,363,277
+multipleankis28.png,454,605,Skull,142,390,186,469
+multipleankis28.png,454,605,Shock,199,408,254,481
+multipleankis28.png,454,605,MXT,311,425,368,501
+multipleankis28.png,454,605,Charger,204,210,257,244
+multipleankis28.png,454,605,Finish Line,174,208,306,257
+multipleankis29.png,454,605,MXT,183,206,214,250
+multipleankis29.png,454,605,Charger,87,134,116,169
+multipleankis29.png,454,605,Skull,53,172,85,213
+multipleankis29.png,454,605,Shock,115,185,146,228
+multipleankis29.png,454,605,Freewheel,47,244,124,350
+multipleankis29.png,454,605,Finish Line,149,101,238,115
+multipleankis3.png,0,0,MXT,236,68,275,130
+multipleankis3.png,0,0,Shock,307,236,348,305
+multipleankis3.png,0,0,Skull,385,109,457,169
+multipleankis3.png,0,0,Charger,238,299,286,370
+multipleankis3.png,0,0,Freewheel,399,170,509,307
+multipleankis30.png,454,605,Shock,57,305,107,398
+multipleankis30.png,454,605,Charger,105,319,162,415
+multipleankis30.png,454,605,Freewheel,195,226,248,432
+multipleankis30.png,454,605,MXT,257,297,306,383
+multipleankis30.png,454,605,Skull,313,269,377,360
+multipleankis31.png,454,605,Shock,197,256,286,307
+multipleankis31.png,454,605,Skull,205,338,297,390
+multipleankis31.png,454,605,Finish Line,222,229,263,424
+multipleankis32.png,454,605,Skull,147,139,243,201
+multipleankis32.png,454,605,MXT,170,208,267,267
+multipleankis32.png,454,605,Freewheel,87,267,318,335
+multipleankis32.png,454,605,Charger,184,373,294,435
+multipleankis32.png,454,605,Shock,150,444,261,524
+multipleankis33.png,454,605,Skull,147,140,242,204
+multipleankis33.png,454,605,MXT,169,210,264,263
+multipleankis33.png,454,605,Freewheel,91,267,318,338
+multipleankis33.png,454,605,Charger,185,372,292,434
+multipleankis33.png,454,605,Shock,151,445,261,520
+multipleankis34.png,0,0,Charger,315,47,379,84
+multipleankis34.png,0,0,Shock,315,119,374,153
+multipleankis34.png,0,0,Skull,306,193,367,229
+multipleankis34.png,0,0,MXT,301,260,360,298
+multipleankis34.png,0,0,Freewheel,257,335,389,380
+multipleankis35.png,454,605,MXT,206,251,288,303
+multipleankis35.png,454,605,Skull,213,338,305,386
+multipleankis35.png,454,605,Charger,216,432,313,482
+multipleankis35.png,454,605,Shock,348,308,443,376
+multipleankis35.png,454,605,Finish Line,242,266,272,479
+multipleankis36.png,454,605,Charger,133,232,189,316
+multipleankis36.png,454,605,Skull,217,213,267,298
+multipleankis36.png,454,605,MXT,290,189,347,265
+multipleankis36.png,454,605,Shock,266,451,345,554
+multipleankis36.png,454,605,Finish Line,137,231,338,282
+multipleankis37.png,454,605,Skull,241,195,286,270
+multipleankis37.png,454,605,Charger,242,329,324,377
+multipleankis37.png,454,605,Finish Line,244,211,293,369
+multipleankis38.png,454,605,Charger,117,247,170,317
+multipleankis38.png,454,605,Skull,126,378,168,462
+multipleankis38.png,454,605,Shock,185,394,245,476
+multipleankis38.png,454,605,MXT,306,418,358,497
+multipleankis38.png,454,605,Finish Line,166,165,304,219
+multipleankis39.png,454,605,Finish Line,50,224,96,350
+multipleankis39.png,454,605,Charger,77,377,151,422
+multipleankis39.png,454,605,Skull,199,416,277,473
+multipleankis39.png,454,605,MXT,301,278,367,320
+multipleankis39.png,454,605,Shock,240,369,314,410
+multipleankis4.png,0,0,Freewheel,267,25,425,99
+multipleankis4.png,0,0,MXT,208,123,247,192
+multipleankis4.png,0,0,Skull,379,121,421,191
+multipleankis4.png,0,0,Shock,296,294,335,366
+multipleankis4.png,0,0,Charger,228,364,283,436
+multipleankis40.png,454,605,MXT,304,229,376,274
+multipleankis40.png,454,605,Shock,288,328,365,385
+multipleankis40.png,454,605,Skull,272,401,352,447
+multipleankis40.png,454,605,Charger,128,401,215,455
+multipleankis40.png,454,605,Finish Line,39,257,90,410
+multipleankis41.png,454,605,Finish Line,216,219,244,358
+multipleankis41.png,454,605,Charger,266,386,342,433
+multipleankis42.png,454,605,MXT,313,425,363,500
+multipleankis42.png,454,605,Skull,145,395,186,470
+multipleankis42.png,454,605,Shock,199,408,254,483
+multipleankis42.png,454,605,Charger,206,211,256,243
+multipleankis42.png,454,605,Finish Line,181,210,303,254
+multipleankis44.png,454,605,Skull,317,267,378,361
+multipleankis44.png,454,605,MXT,257,294,308,383
+multipleankis44.png,454,605,Freewheel,194,227,247,431
+multipleankis44.png,454,605,Charger,106,317,162,413
+multipleankis44.png,454,605,Shock,58,304,106,400
+multipleankis45.png,0,0,Charger,405,23,441,84
+multipleankis45.png,0,0,Shock,391,106,430,164
+multipleankis45.png,0,0,Skull,385,184,419,242
+multipleankis45.png,0,0,MXT,383,252,416,303
+multipleankis45.png,0,0,Freewheel,378,314,412,441
+multipleankis46.png,454,605,Charger,101,136,129,176
+multipleankis46.png,454,605,Finish Line,160,102,250,119
+multipleankis46.png,454,605,Skull,64,177,98,219
+multipleankis46.png,454,605,Shock,124,192,154,236
+multipleankis46.png,454,605,MXT,190,215,219,260
+multipleankis46.png,454,605,Freewheel,63,252,126,344
+multipleankis47.png,454,605,Shock,192,213,265,260
+multipleankis47.png,454,605,Finish Line,129,311,281,359
+multipleankis47.png,454,605,Charger,224,170,292,206
+multipleankis47.png,454,605,Freewheel,183,104,325,158
+multipleankis47.png,454,605,Skull,228,52,296,84
+multipleankis47.png,454,605,MXT,232,80,300,110
+multipleankis48.png,454,605,Skull,146,139,247,199
+multipleankis48.png,454,605,MXT,169,209,268,267
+multipleankis48.png,454,605,Freewheel,89,266,318,333
+multipleankis48.png,454,605,Charger,183,370,301,436
+multipleankis48.png,454,605,Shock,153,445,263,525
+multipleankis49.png,454,605,Finish Line,243,230,293,381
+multipleankis49.png,454,605,Shock,349,261,385,335
+multipleankis49.png,454,605,Charger,401,281,438,351
+multipleankis5.png,0,0,Skull,204,84,274,140
+multipleankis5.png,0,0,Shock,341,226,418,279
+multipleankis5.png,0,0,Charger,396,318,476,364
+multipleankis5.png,0,0,MXT,157,261,223,316
+multipleankis5.png,0,0,Freewheel,99,60,172,220
+multipleankis50.png,454,605,Charger,297,288,383,334
+multipleankis50.png,454,605,MXT,209,317,283,374
+multipleankis50.png,454,605,Skull,122,299,203,356
+multipleankis50.png,454,605,Shock,117,397,197,443
+multipleankis51.png,454,605,MXT,207,247,287,302
+multipleankis51.png,454,605,Skull,213,336,303,386
+multipleankis51.png,454,605,Charger,213,430,313,484
+multipleankis51.png,454,605,Shock,349,304,445,375
+multipleankis51.png,454,605,Finish Line,238,277,276,472
+multipleankis52.png,0,0,Charger,357,10,392,72
+multipleankis52.png,0,0,Shock,351,94,386,150
+multipleankis52.png,0,0,Skull,350,167,382,221
+multipleankis52.png,0,0,MXT,352,242,388,293
+multipleankis52.png,0,0,Freewheel,356,310,396,428
+multipleankis53.png,0,0,Charger,337,57,401,90
+multipleankis53.png,0,0,Shock,340,126,403,161
+multipleankis53.png,0,0,Skull,339,201,399,233
+multipleankis53.png,0,0,MXT,330,279,386,319
+multipleankis53.png,0,0,Freewheel,284,365,416,417
+multipleankis54.png,0,0,Charger,333,26,365,84
+multipleankis54.png,0,0,Shock,332,100,365,156
+multipleankis54.png,0,0,Skull,334,174,368,228
+multipleankis54.png,0,0,MXT,327,246,360,300
+multipleankis54.png,0,0,Freewheel,323,330,362,451
+multipleankis6.png,0,0,Skull,362,147,404,174
+multipleankis6.png,0,0,Charger,308,152,345,176
+multipleankis6.png,0,0,MXT,320,192,356,218
+multipleankis6.png,0,0,Shock,325,262,363,289
+multipleankis6.png,0,0,Freewheel,302,209,369,251
+multipleankis7.png,0,0,Skull,244,156,265,196
+multipleankis7.png,0,0,Charger,240,208,260,248
+multipleankis7.png,0,0,MXT,276,205,299,239
+multipleankis7.png,0,0,Freewheel,307,204,344,276
+multipleankis7.png,0,0,Shock,344,197,371,247
+multipleankis8.png,454,605,Shock,57,308,106,398
+multipleankis8.png,454,605,Charger,106,320,157,412
+multipleankis8.png,454,605,Freewheel,192,227,251,431
+multipleankis8.png,454,605,MXT,255,296,309,382
+multipleankis8.png,454,605,Skull,315,265,378,363
+multipleankis9.png,454,605,Charger,131,226,191,317
+multipleankis9.png,454,605,Skull,215,215,271,298
+multipleankis9.png,454,605,MXT,290,188,350,264
+multipleankis9.png,454,605,Shock,266,452,346,554
+multipleankis9.png,454,605,Finish Line,149,230,316,284
+mxt1.png,454,605,MXT,220,405,310,459
+mxt10.png,454,605,MXT,193,185,306,385
+mxt11.png,454,605,MXT,229,343,290,381
+mxt13.png,454,605,MXT,208,321,265,390
+mxt14.png,454,605,MXT,162,349,299,433
+mxt15.png,454,605,MXT,151,292,344,400
+mxt16.png,454,605,MXT,232,289,299,387
+mxt17.png,454,605,MXT,212,351,282,451
+mxt18.png,454,605,MXT,194,245,286,407
+mxt19.png,454,605,MXT,224,290,326,353
+mxt2.png,454,605,MXT,197,429,297,502
+mxt20.png,454,605,MXT,219,252,310,381
+mxt21.png,454,605,MXT,187,193,291,363
+mxt22.png,454,605,MXT,163,216,324,314
+mxt23.png,454,605,MXT,225,307,290,397
+mxt24.png,454,605,MXT,164,355,285,429
+mxt25.png,454,605,MXT,179,270,263,396
+mxt26.png,454,605,MXT,179,298,299,391
+mxt27.png,454,605,MXT,154,405,236,458
+mxt28.png,454,605,MXT,216,325,283,410
+mxt29.png,454,605,MXT,282,304,345,402
+mxt3.png,454,605,MXT,117,194,302,313
+mxt30.png,454,605,MXT,252,363,303,442
+mxt32.png,454,605,MXT,209,238,276,338
+mxt33.png,0,0,MXT,266,161,442,262
+mxt34.png,454,605,MXT,198,328,283,380
+mxt35.png,0,0,MXT,294,156,345,243
+mxt36.png,0,0,MXT,268,211,354,262
+mxt37.png,0,0,MXT,334,188,375,242
+mxt38.png,0,0,MXT,301,185,353,218
+mxt39.png,0,0,MXT,306,184,340,237
+mxt4.png,454,605,MXT,224,305,279,379
+mxt40.png,0,0,MXT,229,164,316,227
+mxt41.png,0,0,MXT,233,158,322,224
+mxt42.png,0,0,MXT,277,159,332,239
+mxt43.png,0,0,MXT,298,184,349,267
+mxt44.png,0,0,MXT,293,191,366,235
+mxt45.png,454,605,MXT,199,286,252,372
+mxt46.png,0,0,MXT,275,121,321,198
+mxt47.png,0,0,MXT,310,231,382,273
+mxt48.png,0,0,MXT,284,118,415,301
+mxt49.png,0,0,MXT,205,157,394,275
+mxt5.png,454,605,MXT,223,349,322,412
+mxt50.png,0,0,MXT,216,138,415,255
+mxt51.png,0,0,MXT,263,170,328,278
+mxt52.png,0,0,MXT,288,170,360,283
+mxt53.png,0,0,MXT,391,166,476,212
+mxt54.png,0,0,MXT,258,184,340,232
+mxt56.png,454,605,MXT,192,298,278,350
+mxt57.png,0,0,MXT,342,155,423,299
+mxt58.png,0,0,MXT,256,201,386,282
+mxt59.png,0,0,MXT,272,164,358,297
+mxt6.png,454,605,MXT,219,281,284,378
+mxt61.png,454,605,MXT,255,311,309,398
+mxt62.png,454,605,MXT,214,338,299,387
+mxt63.png,454,605,MXT,227,261,279,344
+mxt7.png,454,605,MXT,229,319,291,358
+mxt8.png,454,605,MXT,221,338,267,408
+mxt9.png,454,605,MXT,244,427,280,486
+shock1.png,0,0,Shock,227,157,406,255
+shock10.png,0,0,Shock,378,169,404,210
+shock11.png,0,0,Shock,376,164,419,188
+shock12.png,0,0,Shock,326,120,427,291
+shock13.png,0,0,Shock,378,156,402,194
+shock14.png,0,0,Shock,447,219,487,287
+shock15.png,0,0,Shock,453,214,530,256
+shock17.png,0,0,Shock,403,145,489,199
+shock18.png,0,0,Shock,287,169,342,260
+shock19.png,0,0,Shock,293,182,369,235
+shock2.png,0,0,Shock,432,99,493,135
+shock20.png,0,0,Shock,344,48,379,116
+shock21.png,0,0,Shock,310,173,346,197
+shock22.png,0,0,Shock,325,171,381,257
+shock23.png,0,0,Shock,358,170,532,269
+shock24.png,0,0,Shock,300,185,396,236
+shock25.png,0,0,Shock,360,208,394,261
+shock26.png,454,605,Shock,178,260,268,413
+shock27.png,454,605,Shock,95,272,317,399
+shock28.png,454,605,Shock,249,235,323,367
+shock29.png,454,605,Shock,110,170,263,401
+shock3.png,0,0,Shock,330,137,377,197
+shock30.png,454,605,Shock,181,252,284,408
+shock31.png,454,605,Shock,173,277,260,429
+shock32.png,454,605,Shock,214,327,291,374
+shock34.png,0,0,Shock,389,152,490,317
+shock35.png,454,605,Shock,173,197,306,274
+shock36.png,454,605,Shock,117,200,256,285
+shock37.png,454,605,Shock,116,284,283,383
+shock38.png,454,605,Shock,403,158,442,226
+shock38.png,454,605,Finish Line,298,146,350,271
+shock39.png,454,605,Shock,159,331,290,401
+shock4.png,0,0,Shock,369,163,433,205
+shock40.png,454,605,Shock,187,249,270,400
+shock41.png,454,605,MXT,190,216,218,260
+shock41.png,454,605,Shock,124,192,153,237
+shock41.png,454,605,Freewheel,63,254,122,341
+shock41.png,454,605,Skull,69,177,97,219
+shock41.png,454,605,Charger,103,139,129,174
+shock41.png,454,605,Finish Line,161,105,246,119
+shock42.png,454,605,Shock,179,265,263,417
+shock43.png,454,605,Shock,153,235,263,433
+shock44.png,454,605,Shock,125,316,317,429
+shock45.png,0,0,Shock,293,206,331,228
+shock46.png,454,605,Shock,147,243,268,461
+shock47.png,0,0,Shock,318,199,342,236
+shock48.png,0,0,Shock,289,213,328,235
+shock49.png,0,0,Shock,308,197,330,233
+shock5.png,0,0,Shock,341,149,406,261
+shock50.png,0,0,Shock,463,269,504,332
+shock6.png,0,0,Shock,262,155,367,215
+shock7.png,0,0,Shock,303,138,366,244
+shock8.png,0,0,Shock,275,168,388,235
+shock9.png,0,0,Shock,386,193,426,216
+skull1.png,0,0,Skull,285,170,450,255
+skull10.png,0,0,Skull,276,165,331,262
+skull11.png,0,0,Skull,229,185,315,239
+skull12.png,0,0,Skull,361,118,463,290
+skull13.png,0,0,Skull,352,164,409,252
+skull14.png,0,0,Skull,375,170,432,256
+skull16.png,0,0,Skull,321,195,413,256
+skull17.png,0,0,Skull,361,164,411,253
+skull18.png,0,0,Skull,250,226,283,281
+skull19.png,0,0,Skull,292,254,344,291
+skull2.png,0,0,Skull,331,195,399,228
+skull20.png,0,0,Skull,293,190,329,248
+skull21.png,0,0,Skull,290,150,339,234
+skull22.png,0,0,Skull,256,195,311,264
+skull23.png,0,0,Skull,329,165,513,267
+skull24.png,0,0,Skull,458,200,543,248
+skull25.png,0,0,Skull,313,179,490,275
+skull26.png,0,0,Skull,338,141,451,312
+skull27.png,0,0,Skull,303,107,359,205
+skull28.png,0,0,Skull,321,197,407,246
+skull29.png,0,0,Skull,304,102,365,207
+skull3.png,0,0,Skull,319,198,384,233
+skull30.png,0,0,Skull,266,164,371,216
+skull31.png,0,0,Skull,352,126,435,177
+skull32.png,0,0,Skull,345,156,392,240
+skull33.png,0,0,Skull,307,168,382,209
+skull34.png,0,0,Skull,347,112,453,299
+skull35.png,0,0,Skull,316,126,369,224
+skull37.png,0,0,Skull,289,179,395,232
+skull38.png,0,0,Skull,256,203,334,259
+skull39.png,0,0,Skull,283,202,337,282
+skull4.png,0,0,Skull,303,200,334,256
+skull40.png,0,0,Skull,386,221,424,295
+skull41.png,454,605,Skull,145,240,340,388
+skull42.png,454,605,Skull,131,319,342,460
+skull43.png,454,605,Skull,182,277,283,444
+skull44.png,454,605,Skull,109,258,338,405
+skull45.png,0,0,Skull,336,191,384,216
+skull46.png,454,605,Skull,110,213,290,468
+skull47.png,454,605,Skull,90,189,369,380
+skull48.png,454,605,Skull,147,161,288,406
+skull49.png,454,605,Skull,105,250,296,472
+skull5.png,0,0,Skull,354,196,411,227
+skull50.png,454,605,Skull,122,243,297,465
+skull52.png,454,605,Skull,95,235,357,403
+skull53.png,454,605,Skull,104,172,356,464
+skull54.png,454,605,Skull,153,171,294,397
+skull55.png,454,605,Skull,90,165,324,367
+skull56.png,0,0,Skull,348,172,371,212
+skull57.png,454,605,Skull,65,206,389,460
+skull58.png,454,605,Skull,161,259,295,409
+skull59.png,454,605,Skull,143,258,324,401
+skull6.png,0,0,Skull,211,135,275,177
+skull60.png,454,605,Skull,108,226,274,417
+skull61.png,454,605,Skull,130,219,293,385
+skull62.png,454,605,Skull,166,213,280,422
+skull63.png,454,605,Skull,95,252,267,392
+skull64.png,0,0,Skull,299,165,362,208
+skull65.png,0,0,Skull,310,173,350,232
+skull7.png,0,0,Skull,330,181,368,249
+skull9.png,0,0,Skull,304,159,339,230

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>finishline7.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\train\finishline7.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Finish Line</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>320</xmin>
+			<ymin>170</ymin>
+			<xmax>438</xmax>
+			<ymax>221</ymax>
+		</bndbox>
+	</object>
+</annotation>

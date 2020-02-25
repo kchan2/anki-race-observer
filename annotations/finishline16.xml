@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>finishline16.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\test\finishline16.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Finish Line</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>271</xmin>
+			<ymin>202</ymin>
+			<xmax>441</xmax>
+			<ymax>243</ymax>
+		</bndbox>
+	</object>
+</annotation>

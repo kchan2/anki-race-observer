@@ -1,0 +1,29 @@
+item {
+    id: 1
+    name: 'Charger'
+}
+
+item {
+    id: 2
+    name: 'Finish Line'
+}
+
+item {
+    id: 3
+    name: 'Freewheel'
+}
+
+item {
+    id: 4
+    name: 'MXT'
+}
+
+item {
+    id: 5
+    name: 'Shock'
+}
+
+item {
+    id: 6
+    name: 'Skull'
+}

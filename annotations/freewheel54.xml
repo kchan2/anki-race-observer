@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>freewheel54.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\train\freewheel54.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Freewheel</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>257</xmin>
+			<ymin>116</ymin>
+			<xmax>318</xmax>
+			<ymax>314</ymax>
+		</bndbox>
+	</object>
+</annotation>

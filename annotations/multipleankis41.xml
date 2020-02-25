@@ -1,0 +1,38 @@
+<annotation>
+	<folder>train</folder>
+	<filename>multipleankis41.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\train\multipleankis41.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>454</width>
+		<height>605</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Finish Line</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>216</xmin>
+			<ymin>219</ymin>
+			<xmax>244</xmax>
+			<ymax>358</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Charger</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>266</xmin>
+			<ymin>386</ymin>
+			<xmax>342</xmax>
+			<ymax>433</ymax>
+		</bndbox>
+	</object>
+</annotation>

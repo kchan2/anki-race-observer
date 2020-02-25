@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>shock32.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\train\shock32.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>454</width>
+		<height>605</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Shock</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>214</xmin>
+			<ymin>327</ymin>
+			<xmax>291</xmax>
+			<ymax>374</ymax>
+		</bndbox>
+	</object>
+</annotation>

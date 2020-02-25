@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>shock16.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\test\shock16.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Shock</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>386</xmin>
+			<ymin>169</ymin>
+			<xmax>438</xmax>
+			<ymax>257</ymax>
+		</bndbox>
+	</object>
+</annotation>

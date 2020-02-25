@@ -1,0 +1,39 @@
+filename,width,height,class,xmin,ymin,xmax,ymax
+charger11.png,0,0,Charger,291,180,384,236
+charger18.png,0,0,Charger,278,194,362,240
+charger39.png,0,0,Charger,172,190,322,272
+charger6.png,0,0,Charger,329,181,388,290
+charger9.png,0,0,Charger,324,206,359,228
+finishline16.png,0,0,Finish Line,271,202,441,243
+finishline3.png,0,0,Finish Line,271,44,431,357
+finishline6.png,0,0,Finish Line,313,194,370,308
+freewheel21.png,0,0,Freewheel,194,84,385,399
+freewheel3.png,454,605,Freewheel,88,234,315,403
+freewheel43.png,0,0,Freewheel,163,140,330,235
+freewheel61.png,0,0,Freewheel,338,143,363,224
+multipleankis12.png,0,0,Charger,418,11,448,69
+multipleankis12.png,0,0,Shock,411,83,444,136
+multipleankis12.png,0,0,Skull,402,161,434,213
+multipleankis12.png,0,0,MXT,402,233,436,282
+multipleankis12.png,0,0,Freewheel,398,305,431,420
+multipleankis43.png,454,605,MXT,183,207,213,244
+multipleankis43.png,454,605,Charger,90,135,116,168
+multipleankis43.png,454,605,Shock,114,186,143,226
+multipleankis43.png,454,605,Skull,53,173,84,214
+multipleankis43.png,454,605,Freewheel,47,247,112,335
+multipleankis55.png,0,0,Charger,351,75,417,112
+multipleankis55.png,0,0,Shock,348,154,415,193
+multipleankis55.png,0,0,Skull,342,223,406,260
+multipleankis55.png,0,0,MXT,336,294,397,336
+multipleankis55.png,0,0,Freewheel,291,367,431,422
+mxt12.png,454,605,MXT,140,274,222,376
+mxt31.png,454,605,MXT,187,244,295,311
+mxt55.png,0,0,MXT,343,169,419,297
+mxt60.png,0,0,MXT,316,166,383,261
+shock16.png,0,0,Shock,386,169,438,257
+shock33.png,454,605,Shock,147,240,309,343
+skull15.png,0,0,Skull,390,146,449,238
+skull36.png,0,0,Skull,272,175,367,227
+skull51.png,454,605,Skull,147,198,281,440
+skull66.png,0,0,Skull,342,161,387,236
+skull8.png,0,0,Skull,269,193,335,236

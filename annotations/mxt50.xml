@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>mxt50.png</filename>
+	<path>C:\Users\Jerem\tensorflow\models\research\object_detection\images\train\mxt50.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>0</width>
+		<height>0</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>MXT</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>216</xmin>
+			<ymin>138</ymin>
+			<xmax>415</xmax>
+			<ymax>255</ymax>
+		</bndbox>
+	</object>
+</annotation>
