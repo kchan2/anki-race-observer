@@ -36,11 +36,17 @@ class AnkiCar:
             else:
                 self.unit = 50/w
 
-    def getLaps(self):
-        if (xPos == 123 & yPos == 123):     # 123 holds the place for the position of the starting line
-            self.laps = self.laps + 1
-            self.lapStart.append(time.time())
-
+    def getLaps(self, startingLine):
+        if (self.lastxPos != float(-1) and self.lastyPos != float(-1)):
+            if (startingLine.vertical):
+                if (self.xPos >= startingLine.xPos and self.lastxPos < startingLine.xPos and self.yPos >= startingLine.yPos and self.yPos <= (startingLine.yPos + startingLine.trackWidth)):     # 123 holds the place for the position of the starting line
+                    self.laps = self.laps + 1
+                    self.lapStart.append(time.time())
+            else:
+                if (self.yPos >= startingLine.yPos and self.lastyPos < startingLine.yPos and self.xPos >= startingLine.xPos and self.xPos <= (startingLine.xPos + startingLine.trackWidth)):
+                    self.laps = self.laps + 1
+                    self.lapStart.append(time.time())
+                    
     def getLapTime(self):
         if ((len(self.lapStart)) >= 2):
             startTime = self.lapStart[-2]
@@ -56,11 +62,41 @@ class AnkiCar:
             self.speed.append(speedPerSec)
 
 
+class StartingLine:
+    def __init__(self, img, bounding_box):
+        self.tracker = cv2.TrackerCSRT_create()
+        self.tracker.init(img, tuple(bounding_box))
+        self.vertical = True
+        self.xPos = float(-1)
+        self.yPos = float(-1)
+        self.trackWidth = float(-1)
+
+    def update_rect(self, img):
+        is_success, bounding_box = self.tracker.update(img)
+        if is_success:
+            x, y, w, h = (int (n) for n in bounding_box)
+            cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255,0), 3)
+            if (w > h):
+                self.vertical = False
+                self.yPos = y + (h/2)
+                self.xPos = x
+                self.trackWidth = w
+            else:
+                self.vertical = True
+                self.xPos = x + (w/2)
+                self.yPos = y
+                self.trackWidth = h
+
+
 video =  cv2.VideoCapture("anki_racing_videos/anki_race1.mp4")
 retval, first_frame = video.read()
 bounding_boxes = cv2.selectROIs('Select Cars To Track', first_frame)
 cv2.destroyWindow("Select Cars To Track")
-anki_cars = [AnkiCar(first_frame, bounding_box) for bounding_box in bounding_boxes]
+anki_cars = []
+for bounding_box in bounding_boxes:
+    if (((bounding_box[2]/bounding_box[3]) > 5) or ((bounding_box[3]/bounding_box[2]) > 5)):
+        startingLine = StartingLine(first_frame, bounding_box)
+    else: anki_cars.append(AnkiCar(first_frame, bounding_box))
 
 
 while True:
@@ -68,11 +104,17 @@ while True:
     if not retval:
         break
         
+    startingLine.update_rect(frame)
     for anki_car in anki_cars:
         anki_car.update_rect(frame)
         anki_car.getSpeed()
         if (len(anki_car.speed) > 0):
-            print(str(anki_car.speed[-1]))
+            print(anki_car.speed[-1])
+        anki_car.getLaps(startingLine)
+        print(anki_car.laps)
+        anki_car.getLapTime()
+        if (len(anki_car.lapTime) > 0):
+            print(anki_car.lapTime[-1])
         
     cv2.imshow("Frame", frame)
     if cv2.waitKey(1) == ord("q"):
