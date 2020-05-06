@@ -1,6 +1,7 @@
 import cv2
 import time
 import math
+import json
 
 class AnkiCar:
     
@@ -14,7 +15,9 @@ class AnkiCar:
         self.yPos = float(-1)
         self.updateTime = [float(0),float(0)]
         self.unit = float(-1)
-        self.laps = -1     # assuming car starts at the starting line
+        self.laps = float(-1)     # assuming car starts at the starting line
+        self.lapCount = -1
+        self.ratio = float(0)
         self.lapStart = []     # Time when car starts a lap
         self.lapTime = []     # if not empty, show LapTime[-1]
         self.speed = []     # if not empty, show speed[-1]
@@ -71,7 +74,7 @@ class DataHandler:
         self.startingLine = startingLine
         self.ranking = []
         self.currentSpeed = []
-        self.avgSpeeds = []
+        self.avgSpeed = []
         self.laps = []
         self.currentLapTime = []
         self.avgLapTime = []
@@ -93,15 +96,30 @@ class DataHandler:
 
     def calculateLaps(self, anki_cars, startingLine):
         for car in anki_cars:
+            car.laps = car.laps - car.ratio
             if (car.lastxPos != float(-1) and car.lastyPos != float(-1)):
                 if (startingLine.vertical):
                     if (car.xPos >= startingLine.xPos and car.lastxPos < startingLine.xPos and car.yPos >= startingLine.yPos and car.yPos <= (startingLine.yPos + startingLine.trackWidth)):
-                        car.laps = car.laps + 1
+                        car.lapCount = car.lapCount + 1
                         car.lapStart.append(time.time())
+                        car.laps = car.lapCount
+                    if (len(car.lapTime) > 0):
+                        currentTime = time.time()
+                        car.ratio = (currentTime - car.lapStart[-1])/car.lapTime[-1]
+                        car.laps = car.lapCount + car.ratio
+##                        if (car.laps > (car.lapCount + 1)):
+##                            car.laps = float(car.lapCount + 1 - 0.000000000001)
                 else:
                     if (car.yPos >= startingLine.yPos and car.lastyPos < startingLine.yPos and car.xPos >= startingLine.xPos and car.xPos <= (startingLine.xPos + startingLine.trackWidth)):
-                        car.laps = car.laps + 1
+                        car.lapCount = car.lapCount + 1
                         car.lapStart.append(time.time())
+                        car.laps = car.lapCount
+                    if (len(car.lapTime) > 0):
+                        currentTime = time.time()
+                        car.ratio = (currentTime - car.lapStart[-1])/car.lapTime[-1]
+                        car.laps = car.lapCount + car.ratio
+##                        if (car.laps > (car.lapCount + 1)):
+##                            car.laps = float(car.lapCount + 1 - 0.000000000001)
 
     def calculateLapTime(self, anki_cars):
         for car in anki_cars:
@@ -130,6 +148,28 @@ class DataHandler:
                     split = distance/currentCar.speed[-1]
                     self.splitTime.append(split)
                     startIndex = startIndex + 1
+    
+    def calculateAvgSpeed(self, rank):
+        if (len(rank) > 0):
+            for car in rank:
+                totalSpeed = float(0)
+                oneAvgSpeed = float(1)
+                for s in car.speed:
+                    totalSpeed = totalSpeed + s
+                if (len(car.speed) > 0):
+                    oneAvgSpeed = totalSpeed/len(car.speed)
+                self.avgSpeed.append(oneAvgSpeed)
+
+    def calculateAvgLapTime(self, rank):
+        if (len(rank) > 0):
+            for car in rank:
+                totalLapTime = float(0)
+                oneAvgLapTime = float(1)
+                for l in car.lapTime:
+                    totalLapTime = totalLapTime + l
+                if (len(car.lapTime) > 0):
+                    oneAvgLapTime = totalLapTime/len(car.lapTime)
+                self.avgLapTime.append(oneAvgLapTime)
 
     def getCurrentSpeed(self, rank):
         current = []
@@ -172,6 +212,7 @@ class DataHandler:
         print("Completed laps: " + str(self.laps))
         print("Current lap time: " + str(self.currentLapTime))
         print("Split time: " + str(self.splitTime))
+        print("")
         
 
 video =  cv2.VideoCapture("anki_racing_videos/anki_race1.mp4")
@@ -195,7 +236,7 @@ while True:
     for anki_car in anki_cars:
         anki_car.update_rect(frame)
     dataHandler.handle()
-    dataHandler.display();
+    dataHandler.display()
     
         
     cv2.imshow("Frame", frame)
@@ -204,3 +245,28 @@ while True:
 
 video.release()
 cv2.destroyAllWindows()
+
+dataHandler.calculateAvgLapTime(dataHandler.ranking)
+dataHandler.calculateAvgSpeed(dataHandler.ranking)
+print("Average Lap Time: " + str(dataHandler.avgLapTime))
+print("Average Speed: " + str(dataHandler.avgSpeed))
+print("")
+
+##data = {}
+##
+##for car in dataHandler.ranking:
+##    data['anki_car'] = []
+##    data['anki_car'].append({
+##        'name': '',
+##        'ranking': '',
+##        'laps': '',
+##        'avgLapTime': '',
+##        'fastestLapTime': '',
+##        'avgSpeed': '',
+##        'fastestSpeed': '',
+##        'splitTime': '',
+##    })
+##
+##with open('data.txt', 'w') as outfile:
+##    json.dump(data, outfile)
+##

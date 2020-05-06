@@ -1,8 +1,10 @@
 import numpy as np
 import os
-import sys
 import tensorflow as tf
 import cv2
+import sys
+sys.path.append("C:\\Users\\notebook\\Documents\\GitHub\\models\\research\\")
+sys.path.append("C:\\Users\\notebook\\Documents\\GitHub\\models\\research\\object_detection\\utils")
 
 from object_detection.utils import ops as utils_ops
 from object_detection.utils import label_map_util
@@ -12,8 +14,8 @@ from object_detection.utils import visualization_utils as vis_util
 PATH_TO_FROZEN_GRAPH = 'training/frozen_inference_graph.pb'
 detection_graph = tf.Graph()
 with detection_graph.as_default():
-    od_graph_def = tf.GraphDef()
-    with tf.gfile.GFile(PATH_TO_FROZEN_GRAPH, 'rb') as fid:
+    od_graph_def = tf.compat.v1.GraphDef()
+    with tf.io.gfile.GFile(PATH_TO_FROZEN_GRAPH, 'rb') as fid:
         serialized_graph = fid.read()
         od_graph_def.ParseFromString(serialized_graph)
         tf.import_graph_def(od_graph_def, name='')
@@ -44,7 +46,7 @@ def run_inference_for_single_image(image, graph):
         # Follow the convention by adding back the batch dimension
         tensor_dict['detection_masks'] = tf.expand_dims(
             detection_masks_reframed, 0)
-    image_tensor = tf.get_default_graph().get_tensor_by_name('image_tensor:0')
+    image_tensor = tf.compat.v1.get_default_graph().get_tensor_by_name('image_tensor:0')
 
     # Run inference
     output_dict = sess.run(tensor_dict,
@@ -62,9 +64,9 @@ def run_inference_for_single_image(image, graph):
 
 
 with detection_graph.as_default():
-    with tf.Session() as sess:
+    with tf.compat.v1.Session() as sess:
         # Get handles to input and output tensors
-        ops = tf.get_default_graph().get_operations()
+        ops = tf.compat.v1.get_default_graph().get_operations()
         all_tensor_names = {output.name for op in ops for output in op.outputs}
         tensor_dict = {}
         for key in [
@@ -73,7 +75,7 @@ with detection_graph.as_default():
         ]:
             tensor_name = key + ':0'
             if tensor_name in all_tensor_names:
-                tensor_dict[key] = tf.get_default_graph().get_tensor_by_name(
+                tensor_dict[key] = tf.compat.v1.get_default_graph().get_tensor_by_name(
                     tensor_name)
 
         TEST_IMAGE_DIR_PATH = input("Please enter path to directory with your test images: ")

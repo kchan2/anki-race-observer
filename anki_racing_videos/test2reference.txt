@@ -1,0 +1,124 @@
+* ATTENTION *
+Format: <NAME OF THE CAR> <PIECE ID> <LOCATION ID> <SPEED>
+(Sorry I don't know what unit the speed is in...)
+
+Initial speed: SKULL 300, GROUNDSHOCK 500
+Numbers for speeds vary due to acceleration
+
+Executing: gradle :run
+Arguments: [-PmainClass=edu.oswego.cs.CPSLab.anki.CPSTestProgram, -PcmdLineArgs=, -PjvmLineArgs=, -c, C:\Users\notebook\Documents\NetBeansProjects\Automotive-CPS\settings.gradle]
+
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+Launching connector...
+...looking for cars...
+[SKULL BB, GROUNDSHOCK 51]
+[17:37:13.846] > SKULL BB: LocalizationPositionUpdateMessage{locationId=0, roadPieceId=0, offset=0.0, speed=0, reverse=false}
+[17:37:13.855] > SKULL BB: SetOffsetFromRoadCenterMessage{type=2c, payload=null}
+[17:37:14.157] > GROUNDSHOCK 51: LocalizationPositionUpdateMessage{locationId=0, roadPieceId=0, offset=0.0, speed=0, reverse=false}
+[17:37:14.158] > GROUNDSHOCK 51: SetOffsetFromRoadCenterMessage{type=2c, payload=null}
+[17:37:34.158] > SKULL BB: SdkModeMessage{type=90, payload=null}
+[17:37:34.158] > GROUNDSHOCK 51: SdkModeMessage{type=90, payload=null}
+[17:37:34.160] > SKULL BB: SetSpeedMessage{type=24, payload=null}
+[17:37:34.160] > GROUNDSHOCK 51: SetSpeedMessage{type=24, payload=null}
+SKULL 23 24 282
+GROUNDSHOCK 17 6 444
+SKULL 23 25 289
+GROUNDSHOCK 36 9 511
+SKULL 17 24 309
+GROUNDSHOCK 18 6 498
+SKULL 36 33 283
+GROUNDSHOCK 20 7 484
+SKULL 36 35 307
+GROUNDSHOCK 34 25 507
+SKULL 18 23 303
+GROUNDSHOCK 23 7 518
+SKULL 18 25 310
+GROUNDSHOCK 36 9 517
+SKULL 20 24 323
+GROUNDSHOCK 36 11 502
+SKULL 33 4 306
+GROUNDSHOCK 20 6 490
+SKULL 34 9 308
+GROUNDSHOCK 34 25 499
+SKULL 23 23 309
+GROUNDSHOCK 34 24 477
+SKULL 23 25 288
+GROUNDSHOCK 17 7 504
+SKULL 17 24 310
+GROUNDSHOCK 36 11 499
+SKULL 17 25 294
+GROUNDSHOCK 18 7 489
+SKULL 36 34 299
+GROUNDSHOCK 33 12 506
+SKULL 18 23 303
+GROUNDSHOCK 34 24 490
+SKULL 18 25 296
+GROUNDSHOCK 17 6 487
+SKULL 20 24 311
+GROUNDSHOCK 36 10 507
+SKULL 20 25 307
+GROUNDSHOCK 18 7 496
+SKULL 34 9 312
+GROUNDSHOCK 20 7 491
+SKULL 23 23 307
+GROUNDSHOCK 34 24 483
+SKULL 23 25 297
+GROUNDSHOCK 17 6 505
+SKULL 17 24 308
+GROUNDSHOCK 36 9 506
+SKULL 17 25 291
+GROUNDSHOCK 18 6 505
+SKULL 17 25 291
+GROUNDSHOCK 20 7 505
+SKULL 17 25 291
+GROUNDSHOCK 34 25 506
+SKULL 17 25 291
+GROUNDSHOCK 23 7 521
+SKULL 17 25 291
+GROUNDSHOCK 36 9 503
+SKULL 17 25 291
+GROUNDSHOCK 36 11 499
+SKULL 17 25 291
+GROUNDSHOCK 20 6 499
+SKULL 17 25 291
+GROUNDSHOCK 34 25 496
+SKULL 17 25 291
+GROUNDSHOCK 23 7 518
+SKULL 17 25 291
+GROUNDSHOCK 17 7 510
+SKULL 17 25 291
+GROUNDSHOCK 36 11 501
+SKULL 17 25 291
+GROUNDSHOCK 18 7 510
+SKULL 17 25 291
+GROUNDSHOCK 33 12 504
+SKULL 17 25 291
+GROUNDSHOCK 34 24 494
+SKULL 17 25 291
+GROUNDSHOCK 17 7 511
+SKULL 17 25 291
+GROUNDSHOCK 36 10 506
+SKULL 17 25 291
+GROUNDSHOCK 18 7 508
+SKULL 17 25 291
+
+> Task :run FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command 'C:\Program Files\Java\jdk1.8.0_201\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 7s
+2 actionable tasks: 1 executed, 1 up-to-date
