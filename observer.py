@@ -98,9 +98,11 @@ class DataHandler:
         self.ranking = []
         self.currentSpeed = []
         self.avgSpeed = []
+        self.fastestSpeed = []
         self.laps = []
         self.currentLapTime = []
         self.avgLapTime = []
+        self.fastestLapTime = []
         self.splitTime = []
         self.dataBoxes = list_widgets
 
@@ -181,7 +183,7 @@ class DataHandler:
         if (len(rank) > 0):
             for car in rank:
                 totalSpeed = float(0)
-                oneAvgSpeed = float(1)
+                oneAvgSpeed = float(0)
                 for s in car.speed:
                     totalSpeed = totalSpeed + s
                 if (len(car.speed) > 0):
@@ -191,13 +193,33 @@ class DataHandler:
     def calculateAvgLapTime(self, rank):
         if (len(rank) > 0):
             for car in rank:
-                totalLapTime = float(0)
-                oneAvgLapTime = float(0)
-                for l in car.lapTime:
-                    totalLapTime = totalLapTime + l
                 if (len(car.lapTime) > 0):
-                    oneAvgLapTime = totalLapTime/len(car.lapTime)
-                self.avgLapTime.append(oneAvgLapTime)
+                    totalLapTime = float(0)
+                    oneAvgLapTime = float(0)
+                    for l in car.lapTime:
+                        totalLapTime = totalLapTime + l
+                    if (len(car.lapTime) > 0):
+                        oneAvgLapTime = totalLapTime/len(car.lapTime)
+                    self.avgLapTime.append(oneAvgLapTime)
+
+    def calculateFastestSpeed(self, rank):
+        if (len(rank) > 0):
+            for car in rank:
+                fastSpeed = float(0)
+                for s in car.speed:
+                    if (s > fastSpeed):
+                        fastSpeed = s
+                self.fastestSpeed.append(fastSpeed)
+
+    def calculateFastestLapTime(self, rank):
+        if (len(rank) > 0):
+            for car in rank:
+                if (len(car.lapTime) > 0):
+                    fastLapTime = car.lapTime[0]
+                    for l in car.lapTime:
+                        if (l < fastLapTime):
+                            fastLapTime = l
+                    self.fastestLapTime.append(fastLapTime)
 
     def getCurrentSpeed(self, rank):
         current = []
@@ -236,6 +258,8 @@ class DataHandler:
 
     def display(self):
         nrOfCars = len(self.ranking)
+        if (nrOfCars > 5):
+            nrOfCars = 5
         counter = 0
         while (counter < nrOfCars):
             currentBox = self.dataBoxes[counter]
@@ -251,60 +275,57 @@ class DataHandler:
             counter = counter + 1
 
     def fileCreate(self):
-        self.calculateAvgLapTime(self.ranking)
-        self.calculateAvgSpeed(self.ranking)
-        data = {}
-        data['anki_car'] = []
-        nrOfCars = len(self.ranking)
-        counter = 0
-        while (counter < nrOfCars):
-            data['anki_car'].append({
-                'name': self.ranking[counter].name,
-                'ranking': counter + 1,
-                'laps': self.laps[counter],
-                'avgLapTime': self.avgLapTime[counter],
-                ##'fastestLapTime': '',
-                'avgSpeed': self.avgSpeed[counter],
-                ##'fastestSpeed': '',
-                'splitTime': self.splitTime[counter]
-            })
-            counter = counter + 1
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("File Create Confirmation")
+        msgBox.setText("The race data has been recorded and will be dumped into JSON format.")
+        msgBox.setInformativeText("Do you want to save the data?")
+        msgBox.setStandardButtons(QMessageBox.Save | QMessageBox.Cancel)
+        msgBox.setDefaultButton(QMessageBox.Save)
+        ret = msgBox.exec()
+        if (ret == QMessageBox.Save):
+            self.calculateAvgLapTime(self.ranking)
+            self.calculateAvgSpeed(self.ranking)
+            self.calculateFastestLapTime(self.ranking)
+            self.calculateFastestSpeed(self.ranking)
+            data = {}
+            data['anki_car'] = []
+            nrOfCars = len(self.ranking)
+            if (nrOfCars > 5):
+                nrOfCars = 5
+            counter = 0
+            while (counter < nrOfCars):
+                name = self.ranking[counter].name
+                ranking = counter + 1
+                laps = self.laps[counter]
+                if counter < len(self.avgLapTime):
+                    avgLapTime = self.avgLapTime[counter]
+                else:
+                    avgLapTime = "N/A"
+                if counter < len(self.fastestLapTime):
+                    fastestLapTime = self.fastestLapTime[counter]
+                else:
+                    fastestLapTime = "N/A"
+                avgSpeed = self.avgSpeed[counter]
+                fastestSpeed = self.fastestSpeed[counter]
+                if counter < len(self.splitTime):
+                    split = self.splitTime[counter]
+                else:
+                    split = "N/A"
+                data['anki_car'].append({
+                    'name': name,
+                    'ranking': ranking,
+                    'laps': laps,
+                    'avgLapTime': avgLapTime,
+                    'fastestLapTime': fastestLapTime,
+                    'avgSpeed': avgSpeed,
+                    'fastestSpeed': fastestSpeed,
+                    'splitTime': split
+                })
+                counter = counter + 1
 
-        fileName = time.strftime("%Y%m%d_%H_%M_%S.txt", time.localtime())
-        with open(fileName, 'w') as outfile:
-            json.dump(data, outfile)
-##        msgBox = QMessageBox()
-##        msgBox.setWindowTitle("File Create Confirmation")
-##        msgBox.setText("The race data has been recorded and will be dumped into JSON format.")
-##        msgBox.setInformativeText("Do you want to save the data?")
-##        msgBox.setStandardButtons(QMessageBox.Save | QMessageBox.Cancel)
-##        ret = msgBox.exec_()
-##        print("Success")
-##        if (ret == QMessageBox.Save):
-##            print("Success")
-##            self.calculateAvgLapTime(self.ranking)
-##            self.calculateAvgSpeed(self.ranking)
-##            data = {}
-##            data['anki_car'] = []
-##            nrOfCars = len(self.ranking)
-##            counter = 0
-##            while (counter < nrOfCars):
-##                data['anki_car'].append({
-##                    'name': self.ranking[counter].name,
-##                    'ranking': counter + 1,
-##                    'laps': self.laps[counter],
-##                    'avgLapTime': self.avgLapTime[counter],
-##                    ##'fastestLapTime': '',
-##                    'avgSpeed': self.avgSpeed[counter],
-##                    ##'fastestSpeed': '',
-##                    'splitTime': self.splitTime[counter]
-##                })
-##                counter = counter + 1
-##
-##            fileName = time.strftime("%Y%m%d_%H_%M_%S.txt", time.localtime())
-##            with open(fileName, 'w') as outfile:
-##                json.dump(data, outfile)
-##            print("Success")
+            fileName = time.strftime("%Y%m%d_%H_%M_%S.txt", time.localtime())
+            with open(fileName, 'w') as outfile:
+                json.dump(data, outfile)
         
 
 PATH_TO_LABELS = r'C:\Users\notebook\Documents\GitHub\anki-race-observer\training\label_map.pbtxt'
@@ -378,113 +399,124 @@ class Thread(QThread):
     def run(self):
         global started
         global fileCreated
-        
-        video = cv2.VideoCapture(self.filepath)
-        ret, frame = video.read()
-        finishLine = None
-        anki_cars = []
 
-        with detection_graph.as_default():
-            with tf.Session() as sess:
-                # Get handles to input and output tensors
-                ops = tf.get_default_graph().get_operations()
-                all_tensor_names = {output.name for op in ops for output in op.outputs}
-                tensor_dict = {}
-                for key in [
-                    'num_detections', 'detection_boxes', 'detection_scores',
-                    'detection_classes', 'detection_masks'
-                ]:
-                    tensor_name = key + ':0'
-                    if tensor_name in all_tensor_names:
-                        tensor_dict[key] = tf.get_default_graph().get_tensor_by_name(
-                            tensor_name)
-
-                
-                frame
-                frame_height, frame_width, channels  = frame.shape
-                # Actual detection.
-                output_dict = run_inference_for_single_image(
-                    frame, detection_graph, tensor_dict)
-                boxes = output_dict['detection_boxes']
-                # get all boxes from an array
-                max_boxes_to_draw = boxes.shape[0]
-                # get scores to get a threshold
-                scores = output_dict['detection_scores']
-                # this is set as a default for now
-                min_score_thresh=.5
-                # iterate through all boxes detected (there are alot of detection boxes most are not the ones we want)
-                for i in range(min(max_boxes_to_draw, boxes.shape[0])):
-                    # box is not none and score is higher than 50% (these are the detections we want)
-                    if scores is None or scores[i] > min_score_thresh:
-                        # boxes[i] is the box which will be drawn
-                        class_name = category_index[output_dict['detection_classes'][i]]['name']
-                        # boxes[i] holds [ymin, xmin, ymax, ymin] they are floats ranging from 0 to 1 
-                        y1,x1,y2,x2 = boxes[i]
-                        coordinates = (x1*frame_width, y1*frame_height, x2*frame_width, y2*frame_height)
-                        coordinates = tuple((int (n) for n in coordinates))
-                        if class_name == "Finish Line":
-                            finish_line_coordinates = coordinates
-                            fl_x1, fl_y1, fl_x2, fl_y2 = finish_line_coordinates
-                            fl_w = fl_x2-fl_x1
-                            fl_h = fl_y2-fl_y1
-                            finishLine = FinishLine(frame, (fl_x1,fl_y1,fl_w,fl_h))
-                            finishLine.update_rect(frame)
-                        else:
-                            x1,y1,x2,y2 = coordinates
-                            w = x2-x1
-                            h = y2-y1
-                            anki_cars.append(AnkiCar(frame, (x1,y1,w,h), class_name))
-
-        
-        dataHandler = DataHandler(anki_cars, finishLine, self.list_widgets)
-        
-        for anki_car in anki_cars:
-            anki_car.unit = finishLine.unit
-
-        fileCreated = False
-
-        while True:
+        try:
+            video = cv2.VideoCapture(self.filepath)
+            if not video.isOpened():
+                raise NameError("File Error")
             ret, frame = video.read()
-            if ret:
-                if not started:
-                    dataHandler.fileCreate()
-                    fileCreated = True
-                    self.quit()
-                    break
-                for anki_car in anki_cars:
-                    anki_car.update_rect(frame)
-                dataHandler.handle()
-                dataHandler.display()
-                rgbImage = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                h, w, ch = rgbImage.shape
-                bytesPerLine = ch * w
-                convertToQtFormat = QImage(rgbImage.data, w, h, bytesPerLine, QImage.Format_RGB888)
-                p = convertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
-                self.changePixmap.emit(p)
-            else:
-                break
-        if not fileCreated:
-            dataHandler.fileCreate()
-            fileCreated = True
-            ex.fileCreate()
-            self.quit()
-##        else:
-##            print("Success")
-##            msgBox2 = QMessageBox()
-##            print("Success")
-##            msgBox2.setWindowTitle("File Create Confirmation")
-##            print("Success")
-##            msgBox2.setText("The data has been saved.")
-##            print("Success")
-##            msgBox2.setStandardButtons(QMessageBox.Ok)
-##            print("Success")
-##            ret2 = msgBox2.exec_()
-##            print("Success")
-##            if (ret2 == QMessageBox.Ok):
-##                print("Success")
-##                print()
-            
+            finishLine = None
+            anki_cars = []
 
+            with detection_graph.as_default():
+                with tf.Session() as sess:
+                    # Get handles to input and output tensors
+                    ops = tf.get_default_graph().get_operations()
+                    all_tensor_names = {output.name for op in ops for output in op.outputs}
+                    tensor_dict = {}
+                    for key in [
+                        'num_detections', 'detection_boxes', 'detection_scores',
+                        'detection_classes', 'detection_masks'
+                    ]:
+                        tensor_name = key + ':0'
+                        if tensor_name in all_tensor_names:
+                            tensor_dict[key] = tf.get_default_graph().get_tensor_by_name(
+                                tensor_name)
+
+                    
+                    frame
+                    frame_height, frame_width, channels  = frame.shape
+                    # Actual detection.
+                    output_dict = run_inference_for_single_image(
+                        frame, detection_graph, tensor_dict)
+                    boxes = output_dict['detection_boxes']
+                    # get all boxes from an array
+                    max_boxes_to_draw = boxes.shape[0]
+                    # get scores to get a threshold
+                    scores = output_dict['detection_scores']
+                    # this is set as a default for now
+                    min_score_thresh=.5             
+                    # iterate through all boxes detected (there are alot of detection boxes most are not the ones we want)
+                    for i in range(min(max_boxes_to_draw, boxes.shape[0])):
+                        # box is not none and score is higher than 50% (these are the detections we want)
+                        if scores is None or scores[i] > min_score_thresh:
+                            # boxes[i] is the box which will be drawn
+                            class_name = category_index[output_dict['detection_classes'][i]]['name']
+                            # boxes[i] holds [ymin, xmin, ymax, ymin] they are floats ranging from 0 to 1 
+                            y1,x1,y2,x2 = boxes[i]
+                            coordinates = (x1*frame_width, y1*frame_height, x2*frame_width, y2*frame_height)
+                            coordinates = tuple((int (n) for n in coordinates))
+                            nameRepeated = 1
+                            if class_name == "Finish Line":
+                                finish_line_coordinates = coordinates
+                                fl_x1, fl_y1, fl_x2, fl_y2 = finish_line_coordinates
+                                fl_w = fl_x2-fl_x1
+                                fl_h = fl_y2-fl_y1
+                                finishLine = FinishLine(frame, (fl_x1,fl_y1,fl_w,fl_h))
+                                finishLine.update_rect(frame)
+                            else:
+                                x1,y1,x2,y2 = coordinates
+                                w = x2-x1
+                                h = y2-y1
+                                car_name = class_name
+                                for car in anki_cars:
+                                    if car_name == car.name:
+                                        nameRepeated = nameRepeated + 1
+                                        car_name = class_name + str(nameRepeated)
+                                anki_cars.append(AnkiCar(frame, (x1,y1,w,h), car_name))
+
+
+            if (len(anki_cars) == 0):
+                raise NameError("No car detected.")
+            elif (finishLine == None):
+                raise NameError("No finish line detected.")
+            
+            dataHandler = DataHandler(anki_cars, finishLine, self.list_widgets)
+            
+            for anki_car in anki_cars:
+                anki_car.unit = finishLine.unit
+
+            fileCreated = False
+
+            while True:
+                ret, frame = video.read()
+                if ret:
+                    if not started:
+                        dataHandler.fileCreate()
+                        fileCreated = True
+                        self.quit()
+                        break
+                    for anki_car in anki_cars:
+                        anki_car.update_rect(frame)
+                    dataHandler.handle()
+                    dataHandler.display()
+                    rgbImage = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    h, w, ch = rgbImage.shape
+                    bytesPerLine = ch * w
+                    convertToQtFormat = QImage(rgbImage.data, w, h, bytesPerLine, QImage.Format_RGB888)
+                    p = convertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
+                    self.changePixmap.emit(p)
+                else:
+                    break
+            if not fileCreated:
+                dataHandler.fileCreate()
+                fileCreated = True
+                ex.fileCreate()
+                self.quit()
+                
+        except cv2.error as e:
+            ex.cvError()
+        except Exception as e:
+            if str(e) == "No car detected.":
+                ex.noCar()
+            elif str(e) == "No finish line detected.":
+                ex.noFinishLine()
+            elif str(e) == "File Error":
+                ex.fileError()
+            else:
+                ex.unknownError()
+
+            
 class App(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
@@ -630,9 +662,7 @@ class App(QtWidgets.QMainWindow):
         sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
         self.pushButton.setSizePolicy(sizePolicy)
         self.pushButton.setMaximumSize(QtCore.QSize(16777215, 50))
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/BuzzPics/icons/play-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("C:/Users/BuzzPics/icons/stop-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon = QtGui.QIcon("play-circle.svg")
         self.pushButton.setIcon(icon)
         self.pushButton.setAutoDefault(False)
         self.pushButton.setFlat(False)
@@ -662,12 +692,78 @@ class App(QtWidgets.QMainWindow):
             self.t.start()
             self.pushButton.setFlat(False)
             self.pushButton.setText("Stop")
+            icon = QtGui.QIcon("stop-circle.svg")
+            self.pushButton.setIcon(icon)
             started = True
         
     def fileCreate(self):
         global started
         self.pushButton.setFlat(False)
         self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
+        started = False
+
+    def fileError(self):
+        global started
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("Error")
+        msgBox.setText("This file cannot be opened by Open CV. Please check your file path.")
+        ret = msgBox.exec()
+        self.pushButton.setFlat(False)
+        self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
+        started = False
+
+    def cvError(self):
+        global started
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("Open CV Error")
+        msgBox.setText("This file cannot be opened by Open CV. Please check your file type.")
+        ret = msgBox.exec()
+        self.pushButton.setFlat(False)
+        self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
+        started = False
+
+    def noCar(self):
+        global started
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("No Car Detected")
+        msgBox.setText("No car is detected. Please make sure your video contains ANKI cars " +
+                       "that can be detected.\n See the user manual for detectable ANKI car models.")
+        ret = msgBox.exec()
+        self.pushButton.setFlat(False)
+        self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
+        started = False
+
+    def noFinishLine(self):
+        global started
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("No Finish Line Detected")
+        msgBox.setText("No finish line is detected. Please make sure your video contains an ANKI Overdrive " +
+                       "Start/Finish road piece. ")
+        ret = msgBox.exec()
+        self.pushButton.setFlat(False)
+        self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
+        started = False
+
+    def unknownError(self):
+        global started
+        msgBox = QMessageBox()
+        msgBox.setWindowTitle("Unknown Error")
+        msgBox.setText("An unknown error has occured. Please make sure you follow the user manual. ")
+        ret = msgBox.exec()
+        self.pushButton.setFlat(False)
+        self.pushButton.setText("Start")
+        icon = QtGui.QIcon("play-circle.svg")
+        self.pushButton.setIcon(icon)
         started = False
 
 if __name__ == '__main__':
