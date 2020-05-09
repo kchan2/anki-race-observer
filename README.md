@@ -10,6 +10,9 @@ It is written in Python and uses Tensorflow for detection, OpenCV for image proc
 ![demo2 of program running](./demo/demo2.png)
 
 ### Installation
+To run Anki Race Observer, you need to have Python 3.7. (Versions such as 3.7.6, 3.7.7, etc. work as well)
+
+To install, visit the official website for [the latest version](https://www.python.org/downloads/release/python-377/) (link leads to 3.7.7, but all 3.7 releases should work) and download the 64 bit installer for Windows or Mac respectively.
 
 Anki Race Observer requires the following dependencies to run:
 
@@ -30,3 +33,6 @@ Install PYQt5 using the following command:
 ```sh
 $ pip install PyQt5
 ```
+
+### Usage
+
