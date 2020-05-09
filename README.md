@@ -34,5 +34,42 @@ Install PYQt5 using the following command:
 $ pip install PyQt5
 ```
 
-### Usage
+### How to Run the Program
+After installing all required dependencies, clone anki-race-observer-master or download the master branch as a zip folder.
+
+To run the ANKI Race Observer, you have to change a few lines in observer.py for the program to run:
+
+Line 10: 
+```sh
+sys.path.append("<YOUR PATH TO THE MODELS FOLDER YOU DOWNLOAD WHILE INSTALLING TENSORFLOW>\\models\\research\\")
+```
+Line 11:
+```sh
+sys.path.append("<YOUR PATH TO THE MODELS FOLDER YOU DOWNLOAD WHILE INSTALLING TENSORFLOW >\\models\\research\\object_detection\\utils")
+```
+Line 331:
+```sh
+PATH_TO_LABELS = r'<YOUR PATH TO THE anki-race-observer-master BRANCH YOU CLONED/DOWNLOADED>\anki-race-observer\training\label_map.pbtxt'
+```
+Line 335:
+```sh
+PATH_TO_FROZEN_GRAPH = r'<YOUR PATH TO THE anki-race-observer-master BRANCH YOU CLONED/DOWNLOADED>\anki-race-observer\training\frozen_inference_graph.pb'
+```
+Line 336:
+```sh
+TEST_IMAGE_DIR_PATH = r"<YOUR PATH TO THE anki-race-observer-master BRANCH YOU CLONED/DOWNLOADED>\anki-race-observer\images"
+```
+
+After changing these lines, the program should now be runnable.
+
+To start a race, click the “Start” button. An input dialog window should pop up, prompting for a file path. You can use the test videos that are already in the repository by typing anki_racing_videos\<filename>, or you can use your own ANKI racing videos if you have them. If an error occurs, a message box should pop up describing the error. Else, wait a few seconds for the cars to be detected and enjoy the race!
+
+To stop a race, click the “Stop” button. It should be the same button that you clicked to start the race. A message box should pop up, asking if you want the data to be save or not. Choose “Save” if you want to save the data, then a file in JSON format will be generated in the folder where the observer.py file is located, containing all the data from the race.
+When you are done with the observer, just exit the window, and the program will be terminated.
+
+**ATTENTION**
+Do NOT click on any of the message boxes! It will cause the program to crash. To choose a button, use TAB and ENTER on keyboard instead. If the program crashes when a message box pops up, please do not panic – just close the python shell so that the program can be terminated, then start it over. 
+
+If you have any questions/concerns regarding to ANKI Race Observer, please contact the development team at kchan2@oswego.edu .
+
 
