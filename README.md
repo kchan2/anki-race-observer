@@ -67,7 +67,7 @@ To start a race, click the “Start” button. An input dialog window should pop
 To stop a race, click the “Stop” button. It should be the same button that you clicked to start the race. A message box should pop up, asking if you want the data to be save or not. Choose “Save” if you want to save the data, then a file in JSON format will be generated in the folder where the observer.py file is located, containing all the data from the race.
 When you are done with the observer, just exit the window, and the program will be terminated.
 
-**ATTENTION**
+### **ATTENTION**
 Do NOT click on any of the message boxes! It will cause the program to crash. To choose a button, use TAB and ENTER on keyboard instead. If the program crashes when a message box pops up, please do not panic – just close the python shell so that the program can be terminated, then start it over. 
 
 If you have any questions/concerns regarding to ANKI Race Observer, please contact the development team at kchan2@oswego.edu .
